@@ -1,0 +1,80 @@
+<form method="post">
+<div data-page="login-screen-embedded" class="page">
+<div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="sw_index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Sign Up</div>
+      <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript" src="js/signup.js"></script>
+  <div class="page-content login-screen-content" style="padding-top:40px">
+    <div class="login-screen-title">Sign Up</div>
+	
+   
+      <div class="list-block inputs-list">
+        <ul>
+		<li>
+          <div class="item-content">
+            <div class="item-media"><i class="icon icon-form-name"></i></div>
+            <div class="item-inner"> 
+              <div class="item-title floating-label">Your name</div>
+              <div class="item-input">
+                <input required type="text"  name="name"  id="name" placeholder="" >
+              </div>
+            </div>
+          </div>
+        </li>
+		
+			<li class="item-content">
+			<div class="item-media"><i class="icon icon-form-tel"></i></div>
+            <div class="item-inner"> 
+              <div class="item-title floating-label">Your Mobile Number </div>
+              <div class="item-input">
+                <input type="tel" name="mobileno"  id="mobileno" pattern="\d{10}" placeholder="Please enter a ten digit phone number" required aria-required=”true”/>
+				<p class="validation01">
+						<span class="invalid">No spaces or brackets e.g. 0390001234</span>
+						<span class="valid">That's what we wanted!</span>
+					</p>
+              </div>
+            </div>
+          </li>
+		  <li class="item-content">
+		  <div class="item-media"><i class="icon icon-form-email"></i></div>
+            <div class="item-inner"> 
+              <div class="item-title floating-label">Your Email Id</div>
+              <div class="item-input">
+                <input type="email" name="emailid" id="emailid" placeholder="e.g. ryan@example.net" title="Please enter a valid email" required aria-required=”true” />
+				<p class="validation01">
+						<span class="invalid">Please enter a valid email address e.g. ryan@example.com</span>
+						<span class="valid">Thank you for entering a valid email</span>
+					</p>
+              </div>
+            </div>
+          </li>
+          
+          <li class="item-content">
+		  <div class="item-media"><i class="icon icon-form-password"></i></div>
+            <div class="item-inner"> 
+              <div class="item-title floating-label">Your Password</div>
+              <div class="item-input">
+                <input type="password" name="password"  id="password"   placeholder="" title="Minimum 8 characters, one number, one uppercase and one lowercase letter"  required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"  aria-required=”true”/> 
+              <p class="validation01">
+						<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+						<span class="valid">Your password meets our requirements, thank you.</span>
+					</p>
+			  </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+	  
+      <div class="content-block"><a href="sw_verifyotp.html" name="signup"  class="button button-fill button-raised" onclick="signup()"> Sign Up </a>
+	  <!-- <div class="content-block">
+        <div class="list-block-label">Some text about login information.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </div>-->
+    
+  </div>
+</div>
+</div>

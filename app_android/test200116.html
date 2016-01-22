@@ -1,0 +1,41 @@
+<html>
+ <head>
+   <title>Test</title>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+   <script type="text/javascript" src="http://www.json.org/json2.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+   $('a.pop').click(function(){
+    alert('hi');	
+   	var flickr = {"newUser":[{"Name":"abc","password":"abc","mobileNo":789456124,"email":"abc@gmail.com"}]};
+	alert(JSON.stringify(flickr));
+	var makeFlickrCall = function(flickrObj){   
+	alert(JSON.stringify(flickrObj));
+      $.ajax({
+    url: 'signUpJson.php',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(flickrObj),
+	success: function(data)
+	{
+		alert(data);
+	}
+});
+};
+makeFlickrCall(flickr);
+return false; 
+});
+});
+
+   </script>
+</head>
+<body>
+<form method="post" name="myform">
+  <input name="Name" value="harry" />
+  <input name="password" value="123456" />
+  <input name="email" value="testtest@test.com" />
+  <input name="mobileNo" value="9820817928" />
+  <a href="#" id="clickingEvent" class="pop" rel="example">click to launch</a>
+</form>
+</body>
+</html>
